@@ -1,0 +1,59 @@
+.member-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--border);
+}
+
+.member-row {
+  border-bottom: 1px solid var(--border);
+}
+
+.member-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 4px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 17px;
+}
+
+.member-link:hover {
+  text-decoration: underline;
+}
+
+.counts {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.count-badge {
+  min-width: 22px;
+  text-align: center;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 4px 7px;
+  border-radius: 999px;
+}
+
+.count-badge.pending {
+  background: var(--blue);
+}
+
+.count-badge.assigned {
+  background: var(--orange-a);
+}
+
+.count-badge.done {
+  background: var(--green);
+}
+
+.empty {
+  padding: 16px 4px;
+  color: var(--text-muted);
+}

@@ -1,0 +1,23 @@
+.navbar {
+  background: var(--navbar-bg);
+  color: var(--navbar-text);
+  padding: 14px 20px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--navbar-text);
+  font-weight: 600;
+  font-size: 18px;
+  width: fit-content;
+}
+
+.navbar-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: block;
+}

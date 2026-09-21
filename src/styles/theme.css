@@ -1,0 +1,44 @@
+:root {
+  /* Anchors */
+  --purple: #230658;
+  --black: #000000;
+  --white: #ffffff;
+
+  /* Accents (status + small highlights only — never large surfaces) */
+  --blue: #1851f3;
+  --orange-a: #ffad0f;
+  --green: #1fe148;
+  --red: #ff0f0f;
+
+  /* Surfaces */
+  --bg: #fbfdff; /* near-white tint of the blue/teal family */
+  --surface: var(--white);
+  --border: rgba(0, 0, 0, 0.1);
+  --text: var(--black);
+  --text-muted: rgba(0, 0, 0, 0.6);
+  --navbar-bg: var(--purple);
+  --navbar-text: var(--white);
+
+  font: 16px/1.5 system-ui, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}

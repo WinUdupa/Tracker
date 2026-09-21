@@ -1,0 +1,14 @@
+rules_version = '2';
+
+// Fully open rules: this is an internal, trusted, no-login tool.
+// Anyone with the project config can read and write members/tasks.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /members/{memberId} {
+      allow read, write: if true;
+    }
+    match /tasks/{taskId} {
+      allow read, write: if true;
+    }
+  }
+}

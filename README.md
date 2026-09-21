@@ -55,7 +55,7 @@ When prompted, or in the Vercel project's **Settings → Environment Variables**
 2. In the Vercel project's **Settings → Environment Variables**, add:
    - `EMAIL_USER` — the full Gmail address
    - `EMAIL_PASS` — the app password (no spaces)
-   - `CRON_SECRET` — any random string you generate yourself (e.g. `openssl rand -hex 32`). Vercel automatically sends it as a bearer token on its own cron calls, and the function uses it to reject any other caller.
+   - `CRON_SECRET` — any random string you generate yourself (e.g. `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"` — works the same in PowerShell, bash, or any shell since it just calls Node). Vercel automatically sends it as a bearer token on its own cron calls, and the function uses it to reject any other caller.
    - The same `VITE_FIREBASE_*` variables from step 3, if not already added (the function reads them too, to reach Firestore).
 3. Redeploy (`vercel --prod`) so the cron schedule and new env vars take effect.
 
@@ -79,7 +79,7 @@ src/
   components/
     Navbar.jsx, Loader.jsx, TaskItem.jsx
   pages/
-    Home.jsx          Member list + add/remove member
+    Home.jsx          Member list with pending/assigned/done counts
     MemberPage.jsx     Member's tasks, sorted by due date, add/edit/delete
 api/
   send-reminders.js   Vercel Cron function — daily reminder emails
